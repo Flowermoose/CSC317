@@ -14,7 +14,7 @@ Personal website protfolio. Includes about me, skills, projects, and showcases f
 
 
 ## Approach / What I Did:
-I worked on the website after lectures, so I started on the basic layout and added more from there. I used sections to seperate the sections and articles for the different projects. I used an ordered list of unordered lists for skills to make it more organized, it doesnt look great but I wasnt sure where else to use an ordered list for the assignment.
+I worked on the website after lectures, so I started on the basic layout and added more from there.
 
 
 
