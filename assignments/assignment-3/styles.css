@@ -1,43 +1,46 @@
 body{
     background-color: aliceblue;
     padding: 30px;
+    font-family: 'Verdana', sans-serif;;
 }
+p{
+    margin:10px;
+}
+/* Centered header elements, and added blue color scheme*/
 h1{
     width: 50%;
     margin: auto;
-    font-family: 'Verdana', sans-serif;
     color: midnightblue;
 }
 header > h3{
     width: 50%;
     margin: auto;
-    font-family: 'Verdana', sans-serif;
     color: midnightblue;
 }
+/*Added green lines to seperate sections*/
 main > h3{
     border-top: dotted darkolivegreen 3px;
 }
+/*Center header image*/
 header > img{
     display: block;
     margin: auto;
 }
-
+/*changed nav to be in a row format, nav links space correctly when shrunk*/
 nav {
 
     color: blue;
     background: lightsteelblue;
     border: 20px lightsteelblue;
-    gap: 20px;
     border-radius: 15px;
 }
 nav > ol{
     justify-content: space-between;
     display: flex;
     flex-direction: row;
+    gap: 40px;
 }
-iframe{
-    display: inline;
-}
+/*styled projects in to flex boxes, added hover effects in case I put links in them*/
 article {
     width: 200px;
     border: 10px solid darkseagreen;
@@ -48,17 +51,21 @@ article {
     flex: 1 1 200px;
     min-width: 180px;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 200px;
+    min-width: 180px;
+}
 article:hover{
     transform:translate(0,-5px) scale(1.02,1.02);
     transition: transform .5s;
 
 }
+/*Added colors to form and footer as well as hover effects*/
 footer{
     background:lightsteelblue;
     border-radius: 15px;
-}
-p{
-    margin:10px;
 }
 button{
     background: lightsteelblue;
@@ -66,15 +73,10 @@ button{
 }
 
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 1 200px;
-    min-width: 180px;
-}
 .circleImage{
     border-radius: 100px;
 }
+
 button:hover{background: lightblue}
 li:hover{color:midnightblue}
 a:hover { color: purple; }
