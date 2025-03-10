@@ -1,0 +1,431 @@
+/* San Francisco Twilight - Enhanced CSS Theme
+ * Inspired by the Berkeley view of San Francisco Bay at dusk
+ */
+
+:root {
+    /* Color palette from the cityscape */
+    --tower-gold: #e6c87a;
+    --tower-shadow: #a08654;
+    --dark-blue: #2d4a63;
+    --medium-blue: #5d89a8;
+    --light-blue: #7a879f;
+    --night-blue: #3c4359;
+    --light-gray: #f5f5f5;
+    --warm-white: #f8eac0;
+    --city-light: #fffaee;
+    --fog-gray: #e0e5ea;
+}
+
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fog-gray);
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Enhanced header with skyline silhouette */
+header {
+    background: linear-gradient(to bottom, var(--night-blue), var(--medium-blue));
+    padding: 4rem 0 6rem;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+/* Simplified skyline silhouette */
+.skyline {
+    height: 60px;
+    background-color: var(--night-blue);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath d='M0,100 L50,40 L70,70 L100,30 L150,60 L200,20 L250,50 L300,10 L350,40 L400,30 L450,60 L500,20 L550,50 L600,40 L650,70 L700,30 L750,50 L800,20 L850,60 L900,40 L950,70 L1000,30 L1000,100 Z' fill='black'/%3E%3C/svg%3E");
+    mask-size: cover;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath d='M0,100 L50,40 L70,70 L100,30 L150,60 L200,20 L250,50 L300,10 L350,40 L400,30 L450,60 L500,20 L550,50 L600,40 L650,70 L700,30 L750,50 L800,20 L850,60 L900,40 L950,70 L1000,30 L1000,100 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: cover;
+}
+
+/* Basic container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Enhanced navigation */
+nav {
+    background-color: var(--night-blue);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--tower-gold);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li {
+    margin: 0;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: var(--tower-gold);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Main content area with subtle gradient */
+main {
+    background: linear-gradient(to bottom, white, var(--fog-gray));
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 90%;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+}
+
+/* Feature box with subtle shine */
+.feature {
+    background: linear-gradient(135deg, var(--medium-blue), var(--dark-blue));
+    border-left: 4px solid var(--tower-gold);
+    color: white;
+    padding: 1.8rem;
+    border-radius: 6px;
+    margin: 2rem 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: skewX(-20deg);
+    animation: shine 8s infinite ease-in-out;
+}
+
+/* Enhanced card with subtle glow */
+.card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    border-top: 3px solid var(--tower-gold);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Card with "city lights" style */
+.card-lights {
+    background-color: var(--night-blue);
+    color: white;
+    position: relative;
+}
+
+.card-lights::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10%;
+    left: 10%;
+    height: 3px;
+    background-color: var(--warm-white);
+    box-shadow: 0 0 10px 3px var(--warm-white);
+    opacity: 0.6;
+    border-radius: 3px;
+}
+
+/* Grid system with improved spacing */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Tower-inspired element */
+.tower-element {
+    background-color: var(--fog-gray);
+    padding: 2rem;
+    border-radius: 6px;
+    position: relative;
+    margin-top: 2.5rem;
+    border: 1px solid #ddd;
+}
+
+.tower-element::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--tower-gold);
+    border-radius: 50% 50% 0 0;
+}
+
+/* Enhanced button */
+button, .button {
+    background-color: var(--tower-gold);
+    color: var(--night-blue);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.5rem 0;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, .button:hover {
+    background-color: var(--tower-shadow);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography with subtle enhancements */
+h1, h2, h3 {
+    color: var(--dark-blue);
+    margin: 1rem 0 1.5rem 0;
+}
+
+h1 {
+    font-size: 2.4rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--tower-gold), var(--medium-blue));
+    border-radius: 3px;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--medium-blue);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Enhanced footer with bridge-inspired line */
+footer {
+    background: linear-gradient(to right, var(--dark-blue), var(--medium-blue), var(--dark-blue));
+    color: white;
+    padding: 3rem 0;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.footer-content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg,
+    transparent 0%, var(--tower-gold) 20%,
+    transparent 40%, var(--tower-gold) 60%,
+    transparent 80%, var(--tower-gold) 100%);
+}
+
+/* Bay-inspired divider */
+.bay-divider {
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--medium-blue), transparent);
+    margin: 2.5rem 0;
+    border-radius: 3px;
+}
+
+/* Quote block styled like a landmark */
+blockquote {
+    background-color: var(--fog-gray);
+    border-left: 5px solid var(--tower-gold);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    border-radius: 0 6px 6px 0;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--tower-gold);
+    opacity: 0.3;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+/* Animation for shine effect */
+@keyframes shine {
+    0%, 100% {
+        transform: translateX(-200%) skewX(-20deg);
+    }
+    50% {
+        transform: translateX(200%) skewX(-20deg);
+    }
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.text-gold {
+    color: var(--tower-gold);
+}
+
+.bg-night {
+    background-color: var(--night-blue);
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    header {
+        padding: 3rem 0 5rem;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--night-blue);
+        color: #f0f0f0;
+    }
+
+    main {
+        background: linear-gradient(to bottom, var(--night-blue), #2a3548);
+        color: #f0f0f0;
+    }
+
+    .card {
+        background-color: #2a3548;
+        color: #f0f0f0;
+    }
+
+    h1, h2, h3 {
+        color: var(--tower-gold);
+    }
+
+    .tower-element {
+        background-color: #2a3548;
+        border-color: #444;
+    }
+
+    blockquote {
+        background-color: #2a3548;
+    }
+}
