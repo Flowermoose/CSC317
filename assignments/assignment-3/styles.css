@@ -1,6 +1,6 @@
 body{
     background-color: aliceblue;
-    /*padding: 30px;*/
+    padding: 30px;
 }
 h1{
     width: 50%;
@@ -60,6 +60,10 @@ footer{
 p{
     margin:10px;
 }
+button{
+    background: lightsteelblue;
+    border-radius: 5px;
+}
 
 
 .container {
@@ -71,12 +75,9 @@ p{
 .circleImage{
     border-radius: 100px;
 }
+button:hover{background: lightblue}
 li:hover{color:midnightblue}
 a:hover { color: purple; }
-a:active { color: darkred; }
-a:focus { outline: 2px solid blue; }
+a:active { color: darkorange; }
+a:focus { outline: 2px solid midnightblue;}
 
-.header { grid-area: header; }
-.sidebar { grid-area: sidebar; }
-.content { grid-area: content; }
-.footer { grid-area: footer; }
