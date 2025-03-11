@@ -1,0 +1,153 @@
+/*color pallete from a1-2*/
+:root {
+    /* Color palette from the cityscape */
+    --tower-gold: #e6c87a;
+    --tower-shadow: #a08654;
+    --dark-blue: #2d4a63;
+    --medium-blue: #5d89a8;
+    --light-blue: #7a879f;
+    --night-blue: #3c4359;
+    --light-gray: #f5f5f5;
+    --warm-white: #f8eac0;
+    --city-light: #fffaee;
+    --fog-gray: #e0e5ea;
+}
+body{
+    background-color: var(--fog-gray);
+    padding: 30px;
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.6;
+
+}
+p{
+    margin:10px;
+}
+/* from styles*/
+h1{
+    width: 50%;
+    margin: auto;
+    color: var(--tower-gold);
+}
+header > h3{
+    width: 50%;
+    margin: auto;
+    color: var(--tower-gold);
+}
+/*Added green lines to seperate sections*/
+main > h3{
+    border-top: dotted darkolivegreen 3px;
+}
+/*Center header image, added responsive design*/
+header > img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto
+}
+/*changed nav to be in a row format, nav links space correctly when shrunk*/
+nav {
+
+    color: blue;
+    background: lightsteelblue;
+    border: 20px lightsteelblue;
+    border-radius: 15px;
+}
+nav > ol{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+/*styled projects in to flex boxes, added hover effects in case I put links in them*/
+article {
+    width: 200px;
+    border: 10px solid darkseagreen;
+    background: lightsteelblue;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 200px;
+    min-width: 180px;
+}
+article:hover{
+    transform:translate(0,-5px) scale(1.02,1.02);
+    transition: transform .5s;
+
+}
+/*Added colors to form and footer as well as hover effects*/
+footer{
+    background:lightsteelblue;
+    border-radius: 15px;
+}
+button{
+    background: lightsteelblue;
+    border-radius: 5px;
+}
+
+
+.circleImage{
+    border-radius: 100px;
+}
+
+button:hover{background: lightblue}
+li:hover{color:midnightblue}
+a:hover { color: purple; }
+a:active { color: darkorange; }
+a:focus { outline: 2px solid midnightblue;}
+
+/*some from ai-2 some from class*/
+@media (max-width: 768px) {
+    nav ol {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    header {
+        padding: 3rem 0 5rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--night-blue);
+        color: #f0f0f0;
+    }
+
+    main {
+        background: linear-gradient(to bottom, var(--night-blue), #2a3548);
+        color: #f0f0f0;
+    }
+
+    .card {
+        background-color: #2a3548;
+        color: #f0f0f0;
+    }
+
+    h1, h2, h3 {
+        color: var(--tower-gold);
+    }
+
+    .tower-element {
+        background-color: #2a3548;
+        border-color: #444;
+    }
+
+    blockquote {
+        background-color: #2a3548;
+    }
+}

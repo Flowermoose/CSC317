@@ -1,45 +1,17 @@
 # CSC 317 Assignment 2 Submission
 
-**Name:** Sophia Zoller
-**Student ID:** 924437030  
-**GitHub Username:** flowermoose  
-**Assignment Number:** 2  
+**Name:** Your Name  
+**Student ID:** 900######  
+**GitHub Username:** yourgithubusername  
+**Assignment Number:** 3
 
+# Portfolio Styling Assignment Analysis
 
-##  HTML Personal Portfolio Website Assignment
+## Analysis
+[Write a 250-500 word analysis comparing the different approaches]
 
-### Description:
-Personal website protfolio. Includes about me, skills, projects, and showcases forms and an iframe embed.
+## Lessons Learned
+[Discuss what you learned from this exercise]
 
-
-
-## Approach / What I Did:
-I worked on the website after lectures, so I started on the basic layout and added more from there.
-
-
-
-## Code Explanation:
-I copied the form from the assignment example and changed the buttons to radio and the name to password just to see how forms work.
-
-```html
-    <section>
-       <h3 id="Subscribe">Subscribe</h3>
-           <form action="/submit" method="post">
-
-               <label for="email">Email:</label>
-               <input type="email" id="email" name="email">
-
-               <label for="password">Password:</label>
-               <input type="password" id="password" name="password">
-
-
-               <input type="radio" id="newsletter" name="newsletter" value="">
-               <label for="newsletter">Subscribe to newsletter</label>
-               <input type="radio" id="UpdatesOnly" name="newsletter">
-               <label for="UpdatesOnly">Updates Only</label>
-               <input type="radio" id="optOut" name="newsletter">
-               <label for="optOut">Opt out</label>
-
-               <button type="submit">Create Account</button>
-           </form>
-    </section>
+## Preferred Version
+[Explain which version you prefer and why]

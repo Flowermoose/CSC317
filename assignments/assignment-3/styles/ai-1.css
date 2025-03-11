@@ -1,0 +1,270 @@
+/*make a css file with a blue pastel color scheme. use plenty of
+animations but don't assume the html has classes. remember to style the
+sections and the articles inside*/
+/* Pastel Blue Color Scheme */
+:root {
+    --blue-light: #d6e6ff;
+    --blue-medium: #b3d1ff;
+    --blue-primary: #80b3ff;
+    --blue-dark: #4d94ff;
+    --blue-accent: #3385ff;
+    --text-dark: #2e4a66;
+    --text-light: #f8faff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--blue-light);
+    color: var(--text-dark);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--blue-dark);
+    margin-bottom: 1rem;
+    animation: slideInFromTop 0.8s ease-out;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--blue-accent);
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover {
+    color: var(--blue-dark);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--blue-accent);
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Section Styling */
+section {
+    background-color: var(--blue-medium);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px var(--shadow);
+    animation: fadeInUp 0.7s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+/* Article Styling */
+article {
+    background-color: var(--text-light);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px var(--shadow);
+    border-left: 5px solid var(--blue-primary);
+    animation: slideInFromLeft 0.6s ease-out;
+}
+
+article:hover {
+    border-left-color: var(--blue-dark);
+    transform: scale(1.01);
+}
+
+/* Form Elements */
+input, textarea, button, select {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--blue-medium);
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: var(--text-light);
+}
+
+button {
+    background-color: var(--blue-primary);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--blue-dark);
+    transform: translateY(-3px);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--blue-dark);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    animation: slideInFromTop 0.5s ease-out;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 10px;
+    animation: fadeIn 0.8s ease-in;
+    animation-fill-mode: both;
+}
+
+nav li:nth-child(1) { animation-delay: 0.1s; }
+nav li:nth-child(2) { animation-delay: 0.2s; }
+nav li:nth-child(3) { animation-delay: 0.3s; }
+nav li:nth-child(4) { animation-delay: 0.4s; }
+nav li:nth-child(5) { animation-delay: 0.5s; }
+
+nav a {
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+nav a::after {
+    background-color: var(--text-light);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: var(--text-dark);
+    animation: fadeIn 1s ease-in;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional Element Styling */
+blockquote {
+    border-left: 3px solid var(--blue-primary);
+    padding-left: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--blue-dark);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    animation: fadeIn 0.8s ease-in;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--blue-medium);
+}
+
+th {
+    background-color: var(--blue-primary);
+    color: var(--text-light);
+}
+
+tr:hover {
+    background-color: var(--blue-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 8px 0;
+    }
+}
