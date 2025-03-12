@@ -1,0 +1,85 @@
+body{
+    background-color: aliceblue;
+    padding: 30px;
+    font-family: 'Verdana', sans-serif;;
+}
+p{
+    margin:10px;
+}
+/* Centered header elements, and added blue color scheme*/
+h1{
+    width: 50%;
+    margin: auto;
+    color: midnightblue;
+}
+header > h3{
+    width: 50%;
+    margin: auto;
+    color: midnightblue;
+}
+/*Added green lines to seperate sections*/
+main > h3{
+    border-top: dotted darkolivegreen 3px;
+}
+/*Center header image*/
+header > img{
+    display: block;
+    margin: auto;
+}
+/*changed nav to be in a row format, nav links space correctly when shrunk*/
+nav {
+
+    color: blue;
+    background: lightsteelblue;
+    border: 20px lightsteelblue;
+    border-radius: 15px;
+}
+nav > ol{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+/*styled projects in to flex boxes, added hover effects in case I put links in them*/
+article {
+    width: 200px;
+    border: 10px solid darkseagreen;
+    background: lightsteelblue;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 200px;
+    min-width: 180px;
+}
+article:hover{
+    transform:translate(0,-5px) scale(1.02,1.02);
+    transition: transform .5s;
+
+}
+/*Added colors to form and footer as well as hover effects*/
+footer{
+    background:lightsteelblue;
+    border-radius: 15px;
+}
+button{
+    background: lightsteelblue;
+    border-radius: 5px;
+}
+
+
+.circleImage{
+    border-radius: 100px;
+}
+
+button:hover{background: lightblue}
+li:hover{color:midnightblue}
+a:hover { color: purple; }
+a:active { color: darkorange; }
+a:focus { outline: 2px solid midnightblue;}
+
