@@ -1,8 +1,8 @@
 # CSC 317 Assignment 2 Submission
 
-**Name:** Your Name  
-**Student ID:** 900######  
-**GitHub Username:** yourgithubusername  
+**Name:** Sophia Zoller
+**Student ID:** 924437030  
+**GitHub Username:** Flowermoose  
 **Assignment Number:** 3
 
 # Portfolio Styling Assignment Analysis

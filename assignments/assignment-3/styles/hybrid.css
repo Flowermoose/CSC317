@@ -1,4 +1,4 @@
-/*color pallete from a1-2*/
+/*color pallete from ai-2*/
 :root {
     /* Color palette from the cityscape */
     --tower-gold: #e6c87a;
@@ -13,14 +13,19 @@
     --fog-gray: #e0e5ea;
 }
 body{
-    background-color: var(--fog-gray);
-    padding: 30px;
     font-family: 'Verdana', sans-serif;
     line-height: 1.6;
+    background: var(--night-blue);
+}
+
+header{
+    background: var(--dark-blue);
+    background: linear-gradient(to bottom, var(--dark-blue), var(--night-blue));
 
 }
 p{
     margin:10px;
+    color: var(--fog-gray);
 }
 /* from styles*/
 h1{
@@ -28,29 +33,27 @@ h1{
     margin: auto;
     color: var(--tower-gold);
 }
+ h5{
+    color: var(--tower-gold)
+}
 header > h3{
     width: 50%;
     margin: auto;
-    color: var(--tower-gold);
+
+
 }
-/*Added green lines to seperate sections*/
-main > h3{
-    border-top: dotted darkolivegreen 3px;
-}
-/*Center header image, added responsive design*/
 header > img{
     display: block;
     margin: auto;
     max-width: 100%;
     height: auto
 }
+
+
 /*changed nav to be in a row format, nav links space correctly when shrunk*/
 nav {
 
-    color: blue;
-    background: lightsteelblue;
-    border: 20px lightsteelblue;
-    border-radius: 15px;
+    border-bottom: solid var(--tower-gold)
 }
 nav > ol{
     justify-content: space-between;
@@ -58,13 +61,48 @@ nav > ol{
     flex-direction: row;
     gap: 40px;
 }
+header > ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+/*ai-2*/
+nav a {
+    color: var(--fog-gray);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+/*from ai-1*/
+nav li {
+    margin: 0 10px;
+    animation: fadeIn 0.8s ease-in;
+    animation-fill-mode: both;
+}
+nav li:nth-child(1) { animation-delay: 0.1s; }
+nav li:nth-child(2) { animation-delay: 0.2s; }
+nav li:nth-child(3) { animation-delay: 0.3s; }
+nav li:nth-child(4) { animation-delay: 0.4s; }
+
+
+li{
+    color: var(--fog-gray)
+}
+h3{
+    color: var(--tower-gold);
+}
+/*Added green lines to seperate sections -- from styles-changed to blue*/
+main > h3{
+    border-top: dotted var(--medium-blue) 3px;
+}
 /*styled projects in to flex boxes, added hover effects in case I put links in them*/
 article {
     width: 200px;
-    border: 10px solid darkseagreen;
-    background: lightsteelblue;
+    border: 10px solid var(--medium-blue);
+    background-color: var(--dark-blue);
     padding: 20px;
-    margin: 20px;
+    margin-left: 20px;
     border-radius: 20px;
     flex: 1 1 200px;
     min-width: 180px;
@@ -82,12 +120,14 @@ article:hover{
 }
 /*Added colors to form and footer as well as hover effects*/
 footer{
-    background:lightsteelblue;
-    border-radius: 15px;
+    background:var(--light-blue);
+    padding: 10px;
 }
 button{
-    background: lightsteelblue;
+    background: var(--dark-blue);
+    color: var(--city-light);
     border-radius: 5px;
+    padding: 0.5rem 1rem;
 }
 
 
@@ -95,15 +135,24 @@ button{
     border-radius: 100px;
 }
 
-button:hover{background: lightblue}
-li:hover{color:midnightblue}
-a:hover { color: purple; }
+button:hover{background: var(--light-blue);}
+li:hover{color:var(--fog-gray);}
+a:hover { color: var(--tower-gold);
+    padding: 10px;
+    border-radius: 15px;
+    background: #192139;
+ }
 a:active { color: darkorange; }
-a:focus { outline: 2px solid midnightblue;}
+a:focus { outline: 2px solid var(--fog-gray);}
 
 /*some from ai-2 some from class*/
 @media (max-width: 768px) {
     nav ol {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+    header ul {
         flex-direction: column;
         gap: 1rem;
         padding: 0.5rem 0;
@@ -114,40 +163,22 @@ a:focus { outline: 2px solid midnightblue;}
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: medium;
+    }
+    h3 {
+        font-size: small;
     }
 
     header {
         padding: 3rem 0 5rem;
     }
+    header h1,h2,h3{
+        width: 0;
+        display: inline;
+    }
 }
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--night-blue);
-        color: #f0f0f0;
-    }
-
-    main {
-        background: linear-gradient(to bottom, var(--night-blue), #2a3548);
-        color: #f0f0f0;
-    }
-
-    .card {
-        background-color: #2a3548;
-        color: #f0f0f0;
-    }
-
-    h1, h2, h3 {
-        color: var(--tower-gold);
-    }
-
-    .tower-element {
-        background-color: #2a3548;
-        border-color: #444;
-    }
-
-    blockquote {
-        background-color: #2a3548;
-    }
+/*from ai-1*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
