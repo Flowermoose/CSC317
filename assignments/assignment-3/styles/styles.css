@@ -77,7 +77,7 @@ button{
     border-radius: 100px;
 }
 
-button:hover{background: lightblue}
+button:hover{background: midnightblue}
 li:hover{color:midnightblue}
 a:hover { color: purple; }
 a:active { color: darkorange; }
