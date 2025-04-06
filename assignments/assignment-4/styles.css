@@ -1,0 +1,49 @@
+:root{
+    font-size: 4vh ;
+
+}
+div > div:hover{
+    background: #2a3548;
+}
+
+
+.operators{
+
+    background: orange;
+    border-radius: 45%;
+}
+.numbers{
+
+    background: dimgrey;
+    border-radius: 45%;
+}
+.functions{
+    background: grey;
+    border-radius: 45%;
+}
+.output{
+    grid-column: span 4;
+    text-align: right;
+    font-size: 7vh;
+    margin-right: 5vw;
+}
+
+.container{
+    height:95vh;
+    width:95vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1vw;
+    text-align: center;
+    grid-template-areas: "output output output output"
+                        "function function function operator"
+                        "numbers numbers numbers operator"
+                        "numbers numbers numbers operator"
+                        "numbers numbers numbers operator"
+                        "numbers numbers numbers operator";
+}
+body {
+    background: black;
+    color: white;
+}
