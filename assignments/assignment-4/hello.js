@@ -1,8 +1,10 @@
-// hello.js
-const greeting = "JavaScript";
-
-const createMessage = (name) => {
-    return `Hello, ${name}!`;
-};
-
-console.log(createMessage(greeting));
+function calc()
+{
+    if (this.value == "c") {
+        output.value = 0;
+        return;
+    }
+    else{
+        output.value += this.value;
+    }
+}

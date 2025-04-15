@@ -2,11 +2,25 @@
     font-size: 4vh ;
 
 }
-div > div:hover{
-    background: #2a3548;
+
+/*div > input:hover{*/
+/*    background: grey;*/
+/*    !*border: none;*!*/
+/*}*/
+/*div > input:active{*/
+/*    !*border: none;*!*/
+/*    background: dimgrey;*/
+/*}*/
+div > input{
+    border:none;
+    font-size: 200%;
+    color: whitesmoke;
 }
 
-
+.output{
+    background: black;
+    color: white;
+}
 .operators{
 
     background: orange;
