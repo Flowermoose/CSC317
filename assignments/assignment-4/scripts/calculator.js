@@ -1,11 +1,3 @@
-// // hello.js
-// const greeting = "JavaScript";
-//
-// const createMessage = (name) => {
-//     return `Hello, ${name}!`;
-// };
-//
-// console.log(createMessage(greeting));
 function secureEval(expression) {
     // Only allow numbers, operators, parentheses, and decimal points
     const safePattern = /^[0-9+*/%.()-]+$/;
@@ -24,17 +16,17 @@ function secureEval(expression) {
 
 function calculatorScreen()
 {
-    // flashButton(this.id);
     if (this.value === "c") {
         output.value = "";
     }
     else if (this.value === "="){
-        let total = secureEval(output.value);
-        output.value = total;
+        output.value = secureEval(output.value);
     }
     else if (this.value === "%"){
-        let total = secureEval( output.value + "/100");
-        output.value =  total
+        output.value =  secureEval( output.value + "/100");
+    }
+    else if (this.value === "+-"){
+        output.value =  secureEval( "-1*" + output.value);
     }
     else{
         output.value += this.value;
@@ -49,4 +41,14 @@ function flashButton(id) {
     setTimeout(() => {
         button.classList.remove("pressed");
     }, 100);
+}
+
+function styleSwap() {
+    let theme = document.getElementById('theme');
+    if (theme.href.includes("styles/calculator-ai.css")) {
+        theme.setAttribute('href', 'styles/calculator.css');
+    }
+    else{
+        theme.setAttribute('href', 'styles/calculator-ai.css');
+    }
 }
