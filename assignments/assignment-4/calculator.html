@@ -1,111 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta charset="UTF-8">
+  <meta name="description" content="Javascript Calculator">
   <link id = "theme" rel="stylesheet" href="styles/calculator.css">
   <title>Calculator</title>
 </head>
 <body>
 
 <div class="utility-bar">
-  <ul class=themeSwapper">
-
-    <!-- adapted from geeksforgeeks - https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/-->
+  <ul class="themeSwapper">
+    <li><a href="index.html#Projects">&#8962;</a></li>
     <li>
-      <button onClick="styleSwap()">style</button>
+      <input class="styleSwapper" id="styleSwapper" type="button" onClick="styleSwap()" value="&#9789;" >
     </li>
-
-    <li><a href="#About_Me">&#8962</a></li>
-
-
   </ul>
 </div>
+
 <div class = "container">
-  <input type="button" class="output" id="output" value="" />
+  <input type="button" class="output" id="output" value="0" >
 
   <input type="button" class="functions" id="clear"
 value="c"
-  />
+  >
 
   <input type="button" class="functions" id="negate"
     value="+-"
-  />
+  >
 
   <input type="button" class="functions" id="percent"
-value="%"
-  />
+          value="%"
+  >
 
   <input type="button" class="operators" id="divide"
          value="/"
-  />
-
+  >
 
   <input type="button" class="numbers" id="seven"
          value="7"
-  />
+  >
 
   <input type="button" class="numbers" id="eight"
          value="8"
-  />
+  >
 
   <input type="button" class="numbers" id="nine"
          value="9"
-  />
-
-
+  >
   <input type="button" class="operators" id="times"
          value="*"
-  />
-
-
+  >
 
   <input type="button" class="numbers" id="four"
          value="4"
-  />
+  >
 
   <input type="button" class="numbers" id="five"
          value="5"
-  />
+  >
 
   <input type="button" class="numbers" id="six"
          value="6"
-  />
-
+  >
 
   <input type="button" class="operators" id="minus"
          value="-"
-  />
+  >
 
   <input type="button" class="numbers" id="one"
          value="1"
-  />
+  >
 
   <input type="button" class="numbers" id="two"
          value="2"
-  />
+  >
 
   <input type="button" class="numbers" id="three"
          value="3"
-  />
+  >
 
   <input type="button" class="operators" id="plus"
          value="+"
-  />
+  >
   <input type="button" class="numbers" id="zero"
          value="0"
-  />
+  >
   <input type="button" class="numbers" id="decimal"
          value="."
-  />
+  >
   <input type="button" class="operators" id="equals"
          value="="
-  />
-
+  >
 </div>
 
   <script src="scripts/calculator.js" ></script>
 
     <script>
-      const buttons =  document.querySelectorAll("input");
+      let memory = "";
+      const buttons =  document.querySelectorAll(".container>input");
       const output =  document.getElementById("output");
       for (let i =0 ;i< buttons.length;i++ ){
         buttons[i].addEventListener("click", calculatorScreen);

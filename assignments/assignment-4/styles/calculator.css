@@ -2,16 +2,25 @@
     font-size: 4vh ;
 
 }
+.numbers:active{
+    background: #3c4359;
+}
+.functions:active{
+    background: dimgrey;
+}
+.operators:active{
+    background: darkorange;
+}
 
 /*div > input:hover{*/
 /*    background: grey;*/
 /*    !*border: none;*!*/
 /*}*/
-/*div > input:active{*/
-/*    !*border: none;*!*/
-/*    background: dimgrey;*/
-/*}*/
-div > input{
+div > input:active{
+    /*border: none;*/
+    background: dimgrey;
+}
+input{
     border:none;
     font-size: 200%;
     color: whitesmoke;
@@ -41,10 +50,36 @@ div > input{
     font-size: 7vh;
     margin-right: 5vw;
 }
-
+a{
+    color: orange;
+    text-decoration: none;
+}
+li:hover{
+    transform:scale(120%);
+}
+.styleSwapper{
+    background: black;
+    color:orange;
+    font-size: 28px;
+    margin-top:15px;
+}
+.utility-bar > ul{
+    margin-top:0;
+    position: sticky;
+    top:0;
+    display: flex;
+    gap: 20px;
+    font-size: 40px;
+    flex-direction: row;
+    list-style: none;
+    border: none;
+    background: black;
+}
 .container{
-    height:95vh;
-    width:95vw;
+    height:75vh;
+    /*width:75vh;*/
+    width: 90vw;
+    margin-left: 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;

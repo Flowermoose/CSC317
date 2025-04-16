@@ -1,0 +1,217 @@
+/* Minimalist Calculator Styles */
+
+/* Base Styles */
+body {
+    background-color: #f7f7f7;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Utility Bar */
+.utility-bar {
+    width: 95vw;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.utility-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.utility-bar li {
+    display: inline-block;
+}
+
+.utility-bar a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+}
+
+.utility-bar a:hover {
+    color: #007aff;
+}
+
+.styleSwapper {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0;
+}
+
+.styleSwapper:hover {
+    color: #007aff;
+}
+
+/* Container Layout */
+.container {
+    height: 80vh;
+    width: 95vw;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    grid-template-areas: "output output output output"
+                      "function function function operator"
+                      "numbers numbers numbers operator"
+                      "numbers numbers numbers operator"
+                      "numbers numbers numbers operator"
+                      "numbers numbers numbers operator";
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+/* Output Display */
+.output {
+    grid-area: output;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    text-align: right;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+/* Function Buttons */
+.functions {
+    grid-area: function;
+    border-radius: 5px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.functions:hover {
+    background-color: #e5e5e5;
+}
+
+/* Number Buttons */
+.numbers {
+    grid-area: numbers;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.numbers:hover {
+    background-color: #f5f5f5;
+}
+
+/* Operator Buttons */
+.operators {
+    grid-area: operator;
+    border-radius: 5px;
+    border: none;
+    background-color: #007aff;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.operators:hover {
+    background-color: #0066cc;
+}
+
+/* Special styling for individual buttons */
+#clear, #negate, #percent {
+    background-color: #e8e8e8;
+}
+
+#equals {
+    background-color: #34c759;
+    color: white;
+}
+
+#equals:hover {
+    background-color: #30b753;
+}
+
+/* Fix for grid placement */
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, #decimal {
+    grid-area: auto;
+}
+
+#divide, #times, #minus, #plus, #equals {
+    grid-area: auto;
+}
+
+#clear, #negate, #percent {
+    grid-area: auto;
+}
+
+/* Fixed a typo in your HTML class */
+.themeSwapper {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-height: 700px) {
+    .container {
+        height: 70vh;
+    }
+
+    .output {
+        font-size: 1.8rem;
+    }
+
+    .functions, .numbers, .operators {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container, .utility-bar {
+        width: 98vw;
+    }
+
+    .container {
+        grid-gap: 8px;
+        padding: 10px;
+    }
+}

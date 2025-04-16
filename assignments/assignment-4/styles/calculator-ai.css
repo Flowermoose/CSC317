@@ -7,10 +7,64 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: radial-gradient(circle, #ffffff, #f0f8ff, #e6f0ff);
+    /*background-image: radial-gradient(circle, #ffffff, #f0f8ff, #e6f0ff);*/
+}
+
+/* Utility Bar */
+.utility-bar {
+    width: 95vw;
+    max-width: 500px;
+    background-color: #e2f0ff;
+    border-radius: 25px 25px 0 0;
+    padding: 10px 20px;
+    border: 5px solid #c9e3ff;
+    border-bottom: none;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.utility-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.utility-bar li {
+    display: inline-block;
+}
+
+.utility-bar a {
+    color: #5a7db5;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all 0.2s ease;
+}
+
+.utility-bar a:hover {
+    color: #3a5d95;
+    transform: scale(1.1);
+}
+
+.styleSwapper {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #5a7db5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.styleSwapper:hover {
+    color: #3a5d95;
+    transform: rotate(30deg) scale(1.1);
 }
 
 /* Container Layout */
@@ -30,12 +84,14 @@ body {
                       "numbers numbers numbers operator"
                       "numbers numbers numbers operator";
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 0 0 25px 25px;
     background-color: #e2f0ff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1),
     inset 0 -5px 10px rgba(0, 0, 0, 0.05),
     inset 0 5px 10px rgba(255, 255, 255, 0.7);
     border: 5px solid #c9e3ff;
+    border-top: none;
+    box-sizing: border-box;
 }
 
 /* Output Display */
@@ -54,6 +110,7 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
     border: 3px solid #c4e0ff;
+    box-sizing: border-box;
 }
 
 /* Function Buttons */
@@ -169,13 +226,43 @@ body {
     grid-area: auto;
 }
 
-/* Add some fun animations */
+/*!* Add some fun animations *!*/
 /*@keyframes pulse {*/
 /*    0% { transform: scale(1); }*/
-/*    50% { transform: scale(1.05); }*/
+/*    50% { transform: scale(1.02); }*/
 /*    100% { transform: scale(1); }*/
 /*}*/
 
 /*.container:hover {*/
-/*    animation: pulse 2s infinite;*/
+/*    animation: pulse 3s infinite;*/
 /*}*/
+
+/* Fixed a typo in your HTML class */
+.themeSwapper {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-height: 700px) {
+    .container {
+        height: 85vh;
+    }
+
+    .output {
+        font-size: 2rem;
+    }
+
+    .functions, .numbers, .operators {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container, .utility-bar {
+        width: 95vw;
+    }
+}

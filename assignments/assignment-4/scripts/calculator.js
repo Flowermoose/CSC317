@@ -17,10 +17,11 @@ function secureEval(expression) {
 function calculatorScreen()
 {
     if (this.value === "c") {
-        output.value = "";
+        output.value = "0";
     }
     else if (this.value === "="){
         output.value = secureEval(output.value);
+        memory = output.value;
     }
     else if (this.value === "%"){
         output.value =  secureEval( output.value + "/100");
@@ -28,27 +29,44 @@ function calculatorScreen()
     else if (this.value === "+-"){
         output.value =  secureEval( "-1*" + output.value);
     }
-    else{
-        output.value += this.value;
+    else if (this.value === "M+"){
+        output.value = secureEval( memory + "+" + output.value);
     }
-}
-
-function flashButton(id) {
-    const button = $(id);
-    if (!button) return;
-
-    button.classList.add("pressed");
-    setTimeout(() => {
-        button.classList.remove("pressed");
-    }, 100);
+    else if (this.value === "M-"){
+        output.value = secureEval( memory + "-" + output.value);
+    }
+    else if (this.value === "MR"){
+        output.value = memory;
+    }
+    else if (this.value === "MC"){
+        memory = "";
+    }
+    else{
+        if(output.value === "0"){
+            output.value = this.value;
+        }
+        else {
+            output.value += this.value;
+        }
+    }
 }
 
 function styleSwap() {
     let theme = document.getElementById('theme');
+    let button = document.getElementById('styleSwapper');
     if (theme.href.includes("styles/calculator-ai.css")) {
+        theme.setAttribute('href', 'styles/calculator-ai2.css');
+        button.setAttribute('value','dark' )
+        // value="&#9789"
+    }
+    else if (theme.href.includes("styles/calculator-ai2.css")) {
         theme.setAttribute('href', 'styles/calculator.css');
+        button.setAttribute('value','bright' )
+        // value="&#9789"
     }
     else{
         theme.setAttribute('href', 'styles/calculator-ai.css');
+        button.setAttribute('value','light' )
+        // theme.value="&#9790";
     }
 }
