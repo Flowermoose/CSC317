@@ -1,5 +1,6 @@
 :root{
-    font-size: 4vh ;
+    font-size: 4vh;
+
 
 }
 body {
@@ -7,7 +8,7 @@ body {
     color: white;
 }
 .numbers:active{
-    background: #3c4359;
+    background: #1f2325;
 }
 .functions:active{
     background: dimgrey;
@@ -16,23 +17,19 @@ body {
     background: darkorange;
 }
 
-div > input:active{
-    /*border: none;*/
-    background: dimgrey;
+.memory:active{
+    background: #005ce6;
 }
+
 input{
     border:none;
     font-size: 200%;
     color: whitesmoke;
 }
 
-.output{
-    background: black;
-    color: white;
-}
 .memory{
 
-    background:skyblue;
+    background: #3385ff;
     border-radius: 45%;
 }
 .operators{
@@ -42,7 +39,7 @@ input{
 }
 .numbers{
 
-    background: dimgrey;
+    background: #2f3437;
     border-radius: 45%;
 }
 
@@ -51,9 +48,10 @@ input{
     border-radius: 45%;
 }
 .output{
+    background: black;
     grid-column: span 4;
     text-align: right;
-    font-size: 7vh;
+    font-size: 9vh;
     margin-right: 5vw;
 }
 a{
@@ -61,7 +59,7 @@ a{
     text-decoration: none;
 }
 li:hover{
-    transform:scale(120%);
+    transform:scale(110%);
 }
 .styleSwapper{
     background: black;
@@ -82,6 +80,7 @@ li:hover{
     background: black;
     justify-content: space-between;
 }
+
 .container{
     height:75vh;
     width: 90vw;

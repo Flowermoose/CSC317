@@ -31,7 +31,7 @@ function calculatorScreen()
     }
     else if (this.value === "M+"){
         memory = output.value;
-        document.getElementById("MR").style.backgroundColor = "deepskyblue";
+        document.getElementById("MR").style.backgroundColor = "#5c5cd6";
     }
     else if (this.value === "M-"){
         memory -= output.value;
@@ -41,7 +41,7 @@ function calculatorScreen()
     }
     else if (this.value === "MC"){
         memory = "0";
-        document.getElementById("MR").style.backgroundColor = "skyblue";
+        document.getElementById("MR").style.backgroundColor = "#3385ff";
 
     }
     else{
