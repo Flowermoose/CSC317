@@ -14,6 +14,7 @@ function secureEval(expression) {
     }
 }
 
+
 function calculatorScreen()
 {
     if (this.value === "c") {
@@ -21,7 +22,6 @@ function calculatorScreen()
     }
     else if (this.value === "="){
         output.value = secureEval(output.value);
-        memory = output.value;
     }
     else if (this.value === "%"){
         output.value =  secureEval( output.value + "/100");
@@ -30,16 +30,21 @@ function calculatorScreen()
         output.value =  secureEval( "-1*" + output.value);
     }
     else if (this.value === "M+"){
-        output.value = secureEval( memory + "+" + output.value);
+        memory = output.value;
+        mr = document.getElementById("MR")
+        mr.style.backgroundColor = "deepskyblue";
     }
     else if (this.value === "M-"){
-        output.value = secureEval( memory + "-" + output.value);
+        memory -= output.value;
     }
     else if (this.value === "MR"){
         output.value = memory;
     }
     else if (this.value === "MC"){
-        memory = "";
+        memory = "0";
+        mr = document.getElementById("MR")
+        mr.style.backgroundColor = "skyblue";
+
     }
     else{
         if(output.value === "0"){
@@ -56,17 +61,19 @@ function styleSwap() {
     let button = document.getElementById('styleSwapper');
     if (theme.href.includes("styles/calculator-ai.css")) {
         theme.setAttribute('href', 'styles/calculator-ai2.css');
-        button.setAttribute('value','dark' )
+        button.setAttribute('value','☽');
         // value="&#9789"
     }
     else if (theme.href.includes("styles/calculator-ai2.css")) {
         theme.setAttribute('href', 'styles/calculator.css');
-        button.setAttribute('value','bright' )
+        button.setAttribute('value','☀');
         // value="&#9789"
     }
     else{
         theme.setAttribute('href', 'styles/calculator-ai.css');
-        button.setAttribute('value','light' )
+        button.setAttribute('value','☼');
         // theme.value="&#9790";
     }
 }
+
+

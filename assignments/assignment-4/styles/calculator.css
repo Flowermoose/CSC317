@@ -2,6 +2,10 @@
     font-size: 4vh ;
 
 }
+body {
+    background: black;
+    color: white;
+}
 .numbers:active{
     background: #3c4359;
 }
@@ -12,10 +16,6 @@
     background: darkorange;
 }
 
-/*div > input:hover{*/
-/*    background: grey;*/
-/*    !*border: none;*!*/
-/*}*/
 div > input:active{
     /*border: none;*/
     background: dimgrey;
@@ -30,6 +30,11 @@ input{
     background: black;
     color: white;
 }
+.memory{
+
+    background:skyblue;
+    border-radius: 45%;
+}
 .operators{
 
     background: orange;
@@ -40,6 +45,7 @@ input{
     background: dimgrey;
     border-radius: 45%;
 }
+
 .functions{
     background: grey;
     border-radius: 45%;
@@ -74,10 +80,10 @@ li:hover{
     list-style: none;
     border: none;
     background: black;
+    justify-content: space-between;
 }
 .container{
     height:75vh;
-    /*width:75vh;*/
     width: 90vw;
     margin-left: 5vw;
     display: grid;
@@ -86,13 +92,10 @@ li:hover{
     grid-gap: 1vw;
     text-align: center;
     grid-template-areas: "output output output output"
+                        "memory memory memory memory"
                         "function function function operator"
                         "numbers numbers numbers operator"
                         "numbers numbers numbers operator"
                         "numbers numbers numbers operator"
                         "numbers numbers numbers operator";
-}
-body {
-    background: black;
-    color: white;
 }

@@ -1,4 +1,21 @@
-    SUBMISSION.md File
+Sophia Zoller
+924437030
+
+https://flowermoose.github.io/CSC317/assignments/assignment-4/index.html
+
+https://github.com/Flowermoose/CSC317.git
+
+Description:
+    Calculator app using html css and javascript. I made the css display a grid for the buttons and based the
+    size on the view height and width, I chose this approach so the buttons could be as big as possible for the
+    user without having to scroll to reach anything. I had trouble starting the javascript part because
+    I'm not that familiar with the new functions, especially the DOM functions. I'm finding those pretty overwhelming
+    but there is a lot of overlap between these and the functions used in unity the game engine. I've been learning unity
+    on and off for a month now so I'm happy that what I'm learning in this class might carry over.
+    I added a style swapper Icon that cycles through an apple style css and 2 ai light mode ones.
+    I also added the memory buttons, they work the same way the ones on my phone work, M+ loads a new
+    number in to memory M- subtracts from the memory.
+    I used the code snippets from the class announcements. The additional calculator css is ai.
 
     Create a SUBMISSION.md file in your assignment-4 folder
     Include the following information:

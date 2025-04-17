@@ -13,7 +13,7 @@
   <ul class="themeSwapper">
     <li><a href="index.html#Projects">&#8962;</a></li>
     <li>
-      <input class="styleSwapper" id="styleSwapper" type="button" onClick="styleSwap()" value="&#9789;" >
+      <input class="styleSwapper" id="styleSwapper" type="button" onClick="styleSwap()" value="&#9788;" >
     </li>
   </ul>
 </div>
@@ -21,6 +21,21 @@
 <div class = "container">
   <input type="button" class="output" id="output" value="0" >
 
+  <input type="button" class="memory" id="MC"
+         value="MC"
+  >
+
+  <input type="button" class="memory" id="MR"
+         value="MR"
+  >
+
+  <input type="button" class="memory" id="M+"
+         value="M+"
+  >
+
+  <input type="button" class="memory" id="M-"
+         value="M-"
+  >
   <input type="button" class="functions" id="clear"
 value="c"
   >
@@ -104,5 +119,39 @@ value="c"
         buttons[i].addEventListener("click", calculatorScreen);
       }
     </script>
+
+<script>
+  document.addEventListener("keydown", function(event) {
+
+    const key = event.key;
+
+
+    // Perform calculator logic
+
+    if ("0123456789+-*/.%".includes(key)) {
+
+      if (output.value === "0") {
+        output.value = key;
+      } else {
+        output.value += key;
+      }
+
+    } else if (key === "Enter") {
+
+      event.preventDefault(); // this prevents the form from being submitted
+      output.value = secureEval(output.value);
+
+
+    } else if (key === "Escape") {
+
+      output.value = "0";
+
+    } else if (key === "Backspace" || key === "Delete") {
+
+      output.value = output.value.slice(0,-1);
+
+    }
+  });
+</script>
 </body>
 </html>

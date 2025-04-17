@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /*background-image: radial-gradient(circle, #ffffff, #f0f8ff, #e6f0ff);*/
+    background-image: radial-gradient(circle, #ffffff, #f0f8ff, #e6f0ff);
 }
 
 /* Utility Bar */
@@ -74,15 +74,16 @@ body {
     max-width: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.7fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1vw;
     text-align: center;
     grid-template-areas: "output output output output"
-                      "function function function operator"
-                      "numbers numbers numbers operator"
-                      "numbers numbers numbers operator"
-                      "numbers numbers numbers operator"
-                      "numbers numbers numbers operator";
+                       "memory memory memory memory"
+                       "function function function operator"
+                       "numbers numbers numbers operator"
+                       "numbers numbers numbers operator"
+                       "numbers numbers numbers operator"
+                       "numbers numbers numbers operator";
     padding: 20px;
     border-radius: 0 0 25px 25px;
     background-color: #e2f0ff;
@@ -111,6 +112,32 @@ body {
     margin-bottom: 10px;
     border: 3px solid #c4e0ff;
     box-sizing: border-box;
+}
+
+/* Memory Buttons */
+.memory {
+    grid-area: memory;
+    border-radius: 15px;
+    border: none;
+    background-color: #d9f2ff;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 0 #a8d8ff;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.memory:hover {
+    background-color: #c4e8ff;
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #a8d8ff;
+}
+
+.memory:active {
+    transform: translateY(3px);
+    box-shadow: none;
 }
 
 /* Function Buttons */
@@ -213,6 +240,13 @@ body {
     font-size: 2rem;
 }
 
+/* Special styling for memory buttons */
+.memory {
+    background-color: skyblue;
+    box-shadow: 0 3px 0 #638bbd;
+}
+
+
 /* Fix for grid placement */
 #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, #decimal {
     grid-area: auto;
@@ -226,18 +260,11 @@ body {
     grid-area: auto;
 }
 
-/*!* Add some fun animations *!*/
-/*@keyframes pulse {*/
-/*    0% { transform: scale(1); }*/
-/*    50% { transform: scale(1.02); }*/
-/*    100% { transform: scale(1); }*/
-/*}*/
+#MC, #MR, #M\+, #M\- {
+    grid-area: auto;
+}
 
-/*.container:hover {*/
-/*    animation: pulse 3s infinite;*/
-/*}*/
-
-/* Fixed a typo in your HTML class */
+/* Fixed class for theme swapper */
 .themeSwapper {
     display: flex;
     justify-content: space-between;
@@ -259,10 +286,18 @@ body {
     .functions, .numbers, .operators {
         font-size: 1.2rem;
     }
+
+    .memory {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 500px) {
     .container, .utility-bar {
         width: 95vw;
+    }
+
+    .container {
+        grid-gap: 8px;
     }
 }
