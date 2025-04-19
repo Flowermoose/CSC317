@@ -24,7 +24,7 @@ header{
 
 }
 p{
-    margin:10px;
+    margin:30px;
     color: var(--fog-gray);
 }
 /* from styles*/
@@ -106,14 +106,15 @@ article {
     padding: 20px;
     margin-left: 20px;
     border-radius: 20px;
-    flex: 1 1 200px;
+    flex: 1 1 230px;
     min-width: 180px;
 }
 .container {
+    margin: 50px;
     display: flex;
     flex-wrap: wrap;
-    flex: 0 1 200px;
-    min-width: 180px;
+    flex: 0 1 230px;
+    min-width: 230px;
 }
 article:hover{
     transform:translate(0,-5px) scale(1.02,1.02);
@@ -138,17 +139,25 @@ button{
     padding: 0.5rem 1rem;
 }
 
+#calcImg{
+    border: 3px solid var(--medium-blue);
+    border-radius:5%;
+    width: 180px;
 
+}
 .circleImage{
     border-radius: 100px;
 }
 
-button:hover{background: #192139;
-                color:var(--tower-gold);}
+button:hover{
+    background: #192139;
+    color:var(--tower-gold);
+}
 li:hover{color:var(--fog-gray);}
-li > a:hover { color: var(--tower-gold);
-    padding: 10px;
+li > a:hover {
     border-radius: 1.5rem;
+    color: var(--tower-gold);
+    padding: 10px;
     background: #192139;
  }
 a{color: var(--fog-gray);}
@@ -177,6 +186,12 @@ a:focus { outline: 2px solid var(--fog-gray);}
     h3 {
         padding-top: 0;
         font-size: small;
+    }
+    p{
+        margin: 5px;
+    }
+    .container{
+        margin: 5px;
     }
 
     header {

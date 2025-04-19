@@ -1,0 +1,303 @@
+/* Fun Light Mode Calculator Styles */
+
+/* Base Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient(circle, #ffffff, #f0f8ff, #e6f0ff);
+}
+
+/* Utility Bar */
+.utility-bar {
+    width: 95vw;
+    max-width: 500px;
+    background-color: #e2f0ff;
+    border-radius: 25px 25px 0 0;
+    padding: 10px 20px;
+    border: 5px solid #c9e3ff;
+    border-bottom: none;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.utility-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.utility-bar li {
+    display: inline-block;
+}
+
+.utility-bar a {
+    color: #5a7db5;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all 0.2s ease;
+}
+
+.utility-bar a:hover {
+    color: #3a5d95;
+    transform: scale(1.1);
+}
+
+.styleSwapper {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #5a7db5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.styleSwapper:hover {
+    color: #3a5d95;
+    transform: rotate(30deg) scale(1.1);
+}
+
+/* Container Layout */
+.container {
+    height: 95vh;
+    width: 95vw;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.7fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1vw;
+    text-align: center;
+    grid-template-areas: "output output output output"
+                       "memory memory memory memory"
+                       "function function function operator"
+                       "numbers numbers numbers operator"
+                       "numbers numbers numbers operator"
+                       "numbers numbers numbers operator"
+                       "numbers numbers numbers operator";
+    padding: 20px;
+    border-radius: 0 0 25px 25px;
+    background-color: #e2f0ff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1),
+    inset 0 -5px 10px rgba(0, 0, 0, 0.05),
+    inset 0 5px 10px rgba(255, 255, 255, 0.7);
+    border: 5px solid #c9e3ff;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+/* Output Display */
+.output {
+    grid-area: output;
+    height: 100%;
+    width: 100%;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: #e8f7ff;
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 3px solid #c4e0ff;
+    box-sizing: border-box;
+}
+
+/* Memory Buttons */
+.memory {
+    grid-area: memory;
+    border-radius: 15px;
+    border: none;
+    background-color: #d9f2ff;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 0 #a8d8ff;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.memory:hover {
+    background-color: #c4e8ff;
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #a8d8ff;
+}
+
+.memory:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+/* Function Buttons */
+.functions {
+    grid-area: function;
+    border-radius: 15px;
+    border: none;
+    background-color: #ffcce6;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 #ff99cc;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.functions:hover {
+    background-color: #ffb3d9;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #ff99cc;
+}
+
+.functions:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* Number Buttons */
+.numbers {
+    grid-area: numbers;
+    border-radius: 15px;
+    border: none;
+    background-color: #b3e6ff;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 #80d4ff;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.numbers:hover {
+    background-color: #99ddff;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #80d4ff;
+}
+
+.numbers:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* Operator Buttons */
+.operators {
+    grid-area: operator;
+    border-radius: 15px;
+    border: none;
+    background-color: #ffcc99;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 #ffb366;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.operators:hover {
+    background-color: #ffbb80;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #ffb366;
+}
+
+.operators:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* Special styling for individual buttons to create a rainbow effect */
+#clear {
+    background-color: #ffb3b3;
+    box-shadow: 0 4px 0 #ff8080;
+}
+
+#negate {
+    background-color: #ffccb3;
+    box-shadow: 0 4px 0 #ffaa80;
+}
+
+#percent {
+    background-color: #ffe6b3;
+    box-shadow: 0 4px 0 #ffd480;
+}
+
+#equals {
+    background-color: #b3ffb3;
+    box-shadow: 0 4px 0 #80ff80;
+    font-size: 2rem;
+}
+
+/* Special styling for memory buttons */
+.memory {
+    background-color: skyblue;
+    box-shadow: 0 3px 0 #638bbd;
+}
+
+
+/* Fix for grid placement */
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, #decimal {
+    grid-area: auto;
+}
+
+#divide, #times, #minus, #plus, #equals {
+    grid-area: auto;
+}
+
+#clear, #negate, #percent {
+    grid-area: auto;
+}
+
+#MC, #MR, #M\+, #M\- {
+    grid-area: auto;
+}
+
+/* Fixed class for theme swapper */
+.themeSwapper {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-height: 700px) {
+    .container {
+        height: 85vh;
+    }
+
+    .output {
+        font-size: 2rem;
+    }
+
+    .functions, .numbers, .operators {
+        font-size: 1.2rem;
+    }
+
+    .memory {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container, .utility-bar {
+        width: 95vw;
+    }
+
+    .container {
+        grid-gap: 8px;
+    }
+}
