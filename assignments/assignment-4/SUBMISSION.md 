@@ -1,9 +1,9 @@
 Sophia Zoller
 924437030
 
+https://github.com/Flowermoose/CSC317.git
 https://flowermoose.github.io/CSC317/assignments/assignment-4/index.html
 
-https://github.com/Flowermoose/CSC317.git
 
 Description:
     Calculator app using html css and javascript. I made the css display a grid for the buttons and based the
@@ -16,15 +16,3 @@ Description:
     I also added the memory buttons, they work the same way the ones on my phone work, M+ loads a new
     number in to memory M- subtracts from the memory.
     I used the code snippets from the class announcements. The additional calculator css is ai.
-
-    Create a SUBMISSION.md file in your assignment-4 folder
-    Include the following information:
-        Your name and student ID
-        Links to:
-            GitHub repository
-            Live GitHub Pages URL
-        Brief description of your implementation (100-200 words)
-        Any challenges you faced and how you overcame them
-        Any additional features or improvements you added beyond the requirements
-        Acknowledgment of any resources, tutorials, or code snippets you used
-
