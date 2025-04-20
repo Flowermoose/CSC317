@@ -133,10 +133,10 @@ li:hover{
 
 @media (min-aspect-ratio: 12/9) {
     .utility-bar > ul{
-        font-size:3vw;
+        font-size:6vh;
     }
     .styleSwapper{
-        font-size: 2vw;
+        font-size: 5vh;
     }
     .output{
         grid-column: span 5;
