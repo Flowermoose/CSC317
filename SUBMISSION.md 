@@ -1,0 +1,20 @@
+Sophia Zoller
+924437030
+
+https://github.com/Flowermoose/CSC317.git
+https://flowermoose.github.io/CSC317
+
+
+Reflection:
+
+I learned a lot about working in github during the group assignment. I found was difficult to balance
+fully implementing a feature and avoiding merge conflicts. For example while I was working with pin creation
+I had to alter the pin route, the controller and I had to test it on the home page. If anyone else worked on
+those at the same time we may have gotten a merge conflict. I got around this by researching how to implement my feature
+before starting, and getting my work done earlier in the morning. Another way we could have dealt with this is by
+assigning each person a different page, but since we are so new to web development, and learning the back end required
+understanding how everything connected, I feel like our way worked better, for me at least.
+
+It took me a while to understand the back end. The way the routes were called and the convoluted naming conventions
+made it difficult for me to understand what was happening, but I got used to it eventually. I was able to repurpose
+user to make pins, but I had to learn about using the database as well
